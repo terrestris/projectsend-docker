@@ -3,6 +3,9 @@ services:
   web:
     restart: unless-stopped
     image: terrestris/projectsend:latest
+    volumes:
+      - /opt/projectsend/config:/config
+      - /opt/projectsend/data:/data
     ports:
       - "8080:80"
   mysql:

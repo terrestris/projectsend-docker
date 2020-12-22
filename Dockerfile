@@ -12,6 +12,11 @@ RUN \
  chown -R www-data /var/www/html/ && \
  rm -rf /tmp/* && \
  apt clean
+RUN mkdir -p /defaults/ && \
+ mv /var/www/html/upload /defaults/
 
-# ports and volumes
+COPY  start.sh /scripts/
+
+CMD ["/bin/bash", "/scripts/start.sh"]
+
 EXPOSE 80
