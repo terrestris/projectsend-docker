@@ -1,0 +1,17 @@
+version: "3.0"
+services:
+  web:
+    restart: unless-stopped
+    image: terrestris/projectsend:latest
+    ports:
+      - "8080:80"
+  mysql:
+    restart: unless-stopped
+    image: mariadb:10.5
+    volumes:
+      - /opt/mariadb_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: projectsend
+      MYSQL_USER: projectsend
+      MYSQL_PASSWORD: projectsend
