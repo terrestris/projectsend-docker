@@ -9,7 +9,7 @@ RUN \
  apt install unzip && \
  curl -o /tmp/ProjectSend.zip -L "https://www.projectsend.org/download/387/" && \
  unzip /tmp/ProjectSend.zip -d /var/www/html/ && \
- chown -R www-data /var/www/html/ && \
+ chown -R www-data:www-data /var/www/html/ && \
  rm -rf /tmp/* && \
  apt clean
 RUN mkdir -p /defaults/ && \
