@@ -36,8 +36,7 @@ chown www-data:www-data \
 	/data \
 	/data/projectsend
 
-	chown -R www-data:www-data \
-	/config \
-	/var/www/html
-
+chown -R www-data:www-data \
+	/config
+	
   apache2-foreground
