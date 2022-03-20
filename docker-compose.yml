@@ -2,7 +2,7 @@ version: "3.0"
 services:
   web:
     restart: unless-stopped
-    image: terrestris/projectsend:latest
+    image: projectsend:r1335
     volumes:
       - /opt/projectsend/config:/config
       - /opt/projectsend/data:/data
@@ -10,7 +10,7 @@ services:
       - "8080:80"
   mysql:
     restart: unless-stopped
-    image: mariadb:10.5
+    image: mariadb:10.7
     volumes:
       - /opt/mariadb_data:/var/lib/mysql
     environment:

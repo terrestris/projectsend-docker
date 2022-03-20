@@ -7,7 +7,7 @@ RUN docker-php-ext-install -j$(nproc) pdo_mysql
 RUN \
  apt update && \ 
  apt install unzip && \
- curl -o /tmp/ProjectSend.zip -L "https://www.projectsend.org/download/387/" && \
+ curl -o /tmp/ProjectSend.zip -L "https://www.projectsend.org/download/419/" && \
  unzip /tmp/ProjectSend.zip -d /var/www/html/ && \
  chown -R www-data:www-data /var/www/html/ && \
  rm -rf /tmp/* && \
